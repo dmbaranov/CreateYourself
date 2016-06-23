@@ -9,40 +9,24 @@ import * as actions from './actions.js'
 
 import './style.scss'
 
-const professionsJSON = [
-    {
-        profession: 'pilot',
-        title: 'Пилот'
-    },
-    {
-        profession: 'sailor',
-        title: 'Моряк'
-    },
-    {
-        profession: 'programmer',
-        title: 'Программист'
-    },
-    {
-        profession: 'linguist',
-        title: 'Лингвист'
-    }
-];
-
 export default class Home extends Component {
 
-	onProfessionClick = (profession, title) => {
-        console.log(title);
-		this.props.actions.setProfession(profession, title);
-        browserHistory.push('/' + profession);
+    componentDidMount = () => {
+        this.props.actions.changeDataToShow(professionsJSON);
+    }
+
+	onProfessionClick = (profButton) => {
+		this.props.actions.setProfession(profButton);
+        browserHistory.push('/' + profButton.profession);
 	}
 
     render = () => {
 
-        let professions = professionsJSON.map((item, number) => {
+        let professions = this.props.home.dataToShow.map((item, number) => {
             let itemClass = 'home__body__prof-button prof-button--color-' + (number + 1);
 
             return (
-                <div key={number} className={itemClass} onClick={ this.onProfessionClick.bind(this, item.profession, item.title)}>{item.title}</div>
+                <div key={number} className={itemClass} onClick={ this.onProfessionClick.bind(this, item)}>{item.title}</div>
             )
         });
 

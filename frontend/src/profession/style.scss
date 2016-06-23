@@ -1,0 +1,48 @@
+.profession {
+	margin-top: 50px;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.profession__body {
+	margin-top: 50px;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+.profession__body__prof-button {
+	margin: 25px;
+
+	width: 40%;
+	height: 150px;
+
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 150px;
+	font-family: 'Lato';
+	font-size: 21px;
+
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+	cursor: pointer;
+}
+
+.prof-button--color-1 {
+	background: #DB3340;
+}
+
+.prof-button--color-2 {
+	background: #E8B81A;
+}
+
+.prof-button--color-3 {
+	background: #20DA9B;
+}
+
+.prof-button--color-4 {
+	background: #28ABE3;
+}

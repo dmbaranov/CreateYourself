@@ -43,6 +43,7 @@
     "react-jsonschema-form": "^0.33.2",
     "react-redux": "^4.4.5",
     "react-router": "^2.4.0",
+    "react-router-redux": "^4.0.5",
     "react-skylight": "^0.4.0",
     "react-telephone-input": "^3.4.5",
     "react-ui-tree": "^2.5.0",

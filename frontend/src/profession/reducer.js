@@ -3,7 +3,9 @@ import * as con from './constants.js'
 const initialState = {
 	dataToShow: [],
 	profession: '',
-	title: ''
+	title: '',
+	listOfDocuments: [],
+	listOfCourses: []
 };
 
 export default function home(state = initialState, action) {
