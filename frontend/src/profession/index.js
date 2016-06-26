@@ -7,7 +7,7 @@ import {Col} from 'react-bootstrap'
 
 import * as actions from './action.js'
 
-import './style.scss'
+//import './style.scss'
 
 const professionsJSON = [
     {

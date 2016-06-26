@@ -4,7 +4,7 @@ import { Route, IndexRoute } from 'react-router'
 import App from './App'
 import Home from './home'
 
-import Profession from './profession'
+import Profession from './profession2'
 import ProfessionVariants from './professionsVariants/'
 
 import NotFound from './notFound'

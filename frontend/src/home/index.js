@@ -11,27 +11,35 @@ import './style.scss'
 
 const professionsJSON = [
     {
+        type: 'programmer',
         title: 'Программист'
     },
     {
+        type: 'sailor',
         title: 'Моряк'
     },
     {
+        type: 'linguist',
         title: 'Лингвист'
     }
 ];
 
 export default class Home extends Component {
 
+    onProfessionClick = (prof, e) => {
+        this.props.actions.onProfessionClick(prof);
+        browserHistory.push('/profession/' + prof);
+    }
+
     render = () => {
 
         let professions = professionsJSON.map((item, number) => {
-            /*return (
-                <Col key={number} xs={3} componentClass="div" className="prof-buttons__button">
+            return (
+                <Col key={number} xs={3} componentClass="div" className="prof-buttons__button" onClick={this.onProfessionClick.bind(this, item.type)}>
                     {item.title}
                 </Col> 
-            )*/
-            return (
+            )
+            /*return (
                 <Col key={number} xs={3} componentClass="div">
                     <div className="prof-buttons__button">{item.title}</div>
                     <div className="prof-buttons__tooltip">
@@ -43,7 +51,7 @@ export default class Home extends Component {
                         </ul>
                     </div>
                 </Col>
-            )
+            )*/
         });
 
     	return (

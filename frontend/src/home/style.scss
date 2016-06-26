@@ -3,7 +3,7 @@
 	height: 100%;
 
 	background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./img/background2.jpg') no-repeat top center;
-	background-size: cover;
+	background-size: 100%;
 }
 
 .home__slogan {
@@ -55,6 +55,7 @@
 	border-radius: 10px;
 
 	transition-duration: 0.5s;
+	cursor: pointer;
 }
 
 .prof-buttons__button:hover {
@@ -63,7 +64,7 @@
 	background: white;
 }
 
-.prof-buttons__tooltip {
+/*.prof-buttons__tooltip {
 	position: relative;
 	top: -20px;
 
@@ -104,4 +105,4 @@
 	border-bottom: 1px solid white;
 
 	content: "";
-}
+}*/
