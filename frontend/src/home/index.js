@@ -9,33 +9,58 @@ import * as actions from './actions.js'
 
 import './style.scss'
 
-export default class Home extends Component {
-
-    componentDidMount = () => {
-        this.props.actions.changeDataToShow(professionsJSON);
+const professionsJSON = [
+    {
+        title: 'Программист'
+    },
+    {
+        title: 'Моряк'
+    },
+    {
+        title: 'Лингвист'
     }
+];
 
-	onProfessionClick = (profButton) => {
-		this.props.actions.setProfession(profButton);
-        browserHistory.push('/' + profButton.profession);
-	}
+export default class Home extends Component {
 
     render = () => {
 
-        let professions = this.props.home.dataToShow.map((item, number) => {
-            let itemClass = 'home__body__prof-button prof-button--color-' + (number + 1);
-
+        let professions = professionsJSON.map((item, number) => {
+            /*return (
+                <Col key={number} xs={3} componentClass="div" className="prof-buttons__button">
+                    {item.title}
+                </Col> 
+            )*/
             return (
-                <div key={number} className={itemClass} onClick={ this.onProfessionClick.bind(this, item)}>{item.title}</div>
+                <Col key={number} xs={3} componentClass="div">
+                    <div className="prof-buttons__button">{item.title}</div>
+                    <div className="prof-buttons__tooltip">
+                        <ul>
+                            <li>Item</li>
+                            <li>Item</li>
+                            <li>Item</li>
+                            <li>Item</li>
+                        </ul>
+                    </div>
+                </Col>
             )
         });
 
     	return (
-    		<Col componentClass="div" className="home" xs={12}>
-    			<Col componentClass="div" className="home__logo" xs={12}></Col>
-    			<Col componentClass="div" className="home__body" xs={12}>
+    		<Col xs={12} componentClass="div" className="home">
+                <Col xs={5} componentClass="div" className="home__slogan">
+                    {/*<Col xs={12} componentClass="div" className="home__slogan__title">Создай себя</Col>
+                    <Col xs={12} componentClass="div" className="home__slogan__text">
+                        Приберегите свои силы и время для освоения новой профессии, а мы поможем сориентироваться в мире профессий и расскажем все о работе вашей мечты
+                    </Col>*/}
+                    <div className="home__slogan__title">Создай себя</div>
+                    <div className="home__slogan__text">
+                        Приберегите свои силы и время для освоения новой профессии, а мы поможем сориентироваться в мире профессий и расскажем все о работе вашей мечты
+                    </div>
+                </Col>
+                <Col xs={12} componentClass="div" className="home__prof-buttons">
                     {professions}
-    			</Col>
+                </Col>
     		</Col>
     	)
     };
