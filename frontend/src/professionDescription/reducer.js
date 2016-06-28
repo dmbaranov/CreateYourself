@@ -1,6 +1,6 @@
 const initialState = {};
 
-export default function profession(state = initialState, action) {
+export default function profDesc(state = initialState, action) {
 	switch (action.type) {
 
 		default:

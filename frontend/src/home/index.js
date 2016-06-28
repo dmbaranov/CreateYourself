@@ -7,8 +7,6 @@ import { browserHistory } from 'react-router'
 
 import * as actions from './actions.js'
 
-import './style.scss'
-
 const professionsJSON = [
     {
         type: 'programmer',

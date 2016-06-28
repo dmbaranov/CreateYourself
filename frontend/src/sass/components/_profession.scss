@@ -4,17 +4,17 @@
 }
 
 .profession--background-programmer {
-	background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./img/background-programmer.png') no-repeat top center;
+	background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./profession/img/background-programmer.png') no-repeat top center;
 	background-size: 100%;
 }
 
 .profession--background-sailor {
-	background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./img/background-sailor.png') no-repeat top center;
+	background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./profession/img/background-sailor.png') no-repeat top center;
 	background-size: 100%;
 }
 
 .profession--background-linguist {
-	background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./img/background-linguist.png') no-repeat top center;
+	background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./profession/img/background-linguist.png') no-repeat top center;
 	background-size: 100%;
 }
 
@@ -31,6 +31,8 @@
 
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
+
 }
 
 .profession-list__specialization {
@@ -73,4 +75,13 @@
 
 	border-radius: 5px;
 	background: #2e8d8d;
+
+	transition-duration: 0.5s;
+	cursor: pointer;
+}
+
+.specialization__button:hover {
+	color: #7f8184;
+
+	background: white;
 }
