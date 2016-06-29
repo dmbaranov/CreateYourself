@@ -6,6 +6,7 @@ import Home from './home'
 
 import Profession from './profession'
 import ProfDescription from './professionDescription/'
+import ProfessionMap from './professionMap/'
 
 import NotFound from './notFound'
 
@@ -17,6 +18,7 @@ export const routes = (
 				<Route path="/profession/:profession" component={Profession}></Route>
             </Route>
             <Route path="/profession/:profession/description" component={ProfDescription}/>
+            <Route path="/profession/:profession/description/map" component={ProfessionMap}/>
             <Route path="*" component={NotFound}/>
         </Route>
     </div>

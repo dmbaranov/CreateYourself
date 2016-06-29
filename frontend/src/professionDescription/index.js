@@ -30,6 +30,10 @@ export default class ProfDescription extends Component {
         }
 	}
 
+    onButtonClick = () => {
+        browserHistory.push(`/profession/${this.props.profession.profession}/description/map`)
+    }
+
     render = () => {
 
     	let aboutProfession = professionAboutJSON.map((item, number) => {
@@ -53,7 +57,7 @@ export default class ProfDescription extends Component {
                 		{aboutProfession}
                 	</Col>
                 	<Col xs={9} xsOffset={1} componentClass="div" className="prof-description__menu__buttons">
-	                	<Col xs={12} componentClass="div" className="prof-description__menu__button">
+	                	<Col xs={12} componentClass="div" className="prof-description__menu__button" onClick={this.onButtonClick.bind(this)}>
 	                		Где учиться
 	                	</Col>
 	                	<Col xs={12} componentClass="div" className="prof-description__menu__button">

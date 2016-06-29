@@ -2,8 +2,8 @@
 	height: 15vh;
 	padding: 5px 0;
 
-	background: #033960;
-	background: linear-gradient(to right, #033960, #231f20);
+	background: $medium-purple;
+	background: linear-gradient(to right, $medium-purple, $dark-gray);
 }
 
 .app__logo {
@@ -24,14 +24,15 @@
 	position: relative;
 
 	font-size: 18px;
-	color: #ffffff;
+	font-family: $f-family;
+	color: $white;
 }
 
 .app__navigation__link:hover,
 .app__navigation__link:active,
 .app__navigation__link:visited,
 .app__navigation__link:link, {
-	color: #ffffff;
+	color: $white;
 	text-decoration: none;
 }
 
@@ -42,7 +43,7 @@
 	height: 2px;
 	bottom: -5px;
 	left: 0;
-	background-color: #ffffff;
+	background-color: $white;
 	visibility: hidden;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);

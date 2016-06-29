@@ -1,11 +1,13 @@
+/* eslint-disable */
 import * as con from './constants.js'
 
-export function onSpecializationClick(spec) {
+export function onSpecializationClick(profession, title) {
 	return dispatch => {
 		dispatch({
 			type: con.SPECIALIZATION_CLICK,
 			payload: {
-				value: spec
+				profession: profession,
+				title: title
 			}
 		});
 	}

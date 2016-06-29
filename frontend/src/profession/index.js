@@ -59,7 +59,7 @@ export default class Profession extends Component {
 
     onSpecializationClick = (profession, title) => {
         browserHistory.push(`/profession/${profession}/description`);
-        this.props.actions.onSpecializationClick(title);
+        this.props.actions.onSpecializationClick(profession, title);
     }
 
     render = () => {
@@ -80,7 +80,7 @@ export default class Profession extends Component {
                     });
                 }
                 else {
-                    specButtons = <Col xs={12} componentClass="div" className="specialization__button" onClick={this.onSpecializationClick.bind(this, item.specialization)}>{item.specializationTitle}</Col>
+                    specButtons = <Col xs={12} componentClass="div" className="specialization__button" onClick={this.onSpecializationClick.bind(this, item.specialization, item.specializationTitle)}>{item.specializationTitle}</Col>
                 }
 
                 return (

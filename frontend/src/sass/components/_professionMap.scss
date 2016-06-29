@@ -1,0 +1,30 @@
+.prof-map {
+	min-height: 85vh;
+	height: 100%;
+	padding: 0;
+}
+
+.prof-map__menu {
+	min-height: 85vh;
+	height: 100%;
+	padding-left: 0;
+
+	background: linear-gradient(to right, $light-blue, $dark-gray);
+}
+
+.prof-map__menu__tabs .nav-tabs {
+	border: 0;
+}
+
+.prof-map__menu__tabs .tab-content {
+	border: 0 
+}
+
+.prof-map__menu__tabs .tab-content {
+	margin-top: 30px;
+}
+
+.prof-map__map {
+	min-height: 85vh;
+	height: 100%;
+}
